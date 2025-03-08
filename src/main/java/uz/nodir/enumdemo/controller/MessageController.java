@@ -23,7 +23,7 @@ import uz.nodir.enumdemo.service.MessageService;
 public class MessageController {
     private final MessageService messageService;
 
-    @PostMapping
+    @PostMapping("/send")
     public ResponseEntity<MessageResponseDTO> send(@RequestBody MessageRequestDTO requestDTO) {
         return ResponseEntity.ok(
                 messageService.handleMessage(requestDTO)
